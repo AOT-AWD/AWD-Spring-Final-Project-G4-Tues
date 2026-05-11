@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- Shared styles: navbar, footer, buttons, typography, variables -->
+  <link rel="stylesheet" href="../home.css" />
+  <!-- Products page styles -->
+  <link rel="stylesheet" href="../products.css" />
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav class="navbar navbar-expand-lg s-navbar sticky-top" id="navbar">
+    <div class="container">
+      <a class="navbar-brand s-brand" href="./home.html">Samara’s E-Commerce</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link s-nav-link" href="./home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link s-nav-link" href="./about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link s-nav-link active" href="./products.html">Products</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ══ HERO ══ -->
+  <section class="p-hero">
+    <!--
+      Lifestyle/shopping image from Unsplash (free to use).
+      Swap the src for your own photography.
+      Good search terms: "luxury shopping", "product flat lay", "boutique store"
+    -->
+    <img
+      class="p-hero-media"
+      src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=1600&auto=format&fit=crop"
+      alt="Curated products"
+    />
+    <div class="p-hero-overlay"></div>
+    <div class="p-hero-caption">
+      <p class="s-eyebrow animate__animated animate__fadeIn">Thoughtfully Curated</p>
+      <h1 class="animate__animated animate__fadeInUp">
+        Our <em>Products.</em>
+      </h1>
+      <p class="animate__animated animate__fadeIn animate__delay-1s">
+        Browse hundreds of quality items — or search for exactly what you need.
+      </p>
+      <a href="#search" class="btn s-btn animate__animated animate__fadeIn animate__delay-2s">
+        Start Browsing
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ══ PAGE INTRO / DESCRIPTION ══ -->
+  <section class="p-intro">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-7 s-reveal">
+          <span class="p-intro-label">What We Carry</span>
+          <h2>Discover something <em>you'll love.</em></h2>
+          <p class="mx-auto">
+            From everyday essentials to thoughtful finds — our collection spans electronics,
+            clothing, home goods, and beyond. Use the search below to explore products from
+            our full catalogue, powered by live inventory.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature pills -->
+      <div class="row justify-content-center mt-4 g-3 s-reveal">
+        <div class="col-auto">
+          <span class="s-badge"><i data-lucide="zap"></i> Instant Search</span>
+        </div>
+        <div class="col-auto">
+          <span class="s-badge"><i data-lucide="package"></i> 500+ Products</span>
+        </div>
+        <div class="col-auto">
+          <span class="s-badge"><i data-lucide="star"></i> Rated &amp; Reviewed</span>
+        </div>
+        <div class="col-auto">
+          <span class="s-badge"><i data-lucide="truck"></i> Fast Delivery</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ SEARCH + RESULTS ══ -->
+  <section class="p-search-section" id="search">
+    <div class="container">
+
+      <!-- Search box -->
+      <div class="p-search-box s-reveal">
+        <label for="searchInput">Search the catalogue</label>
+        <p class="mb-3" style="font-size:.88rem;color:var(--clr-text-muted);font-weight:300;">
+          Type a product name, category, or keyword — we'll surface the best matches instantly.
+        </p>
+        <div class="p-search-field-wrap">
+          <input
+            type="text"
+            id="searchInput"
+            class="p-search-input"
+            placeholder="e.g. headphones, shirt, lamp…"
+            autocomplete="off"
+          />
+          <select id="categorySelect" class="p-sort-select">
+            <option value="">All Categories</option>
+            <option value="beauty">Beauty</option>
+            <option value="fragrances">Fragrances</option>
+            <option value="furniture">Furniture</option>
+            <option value="groceries">Groceries</option>
+            <option value="home-decoration">Home Decoration</option>
+            <option value="kitchen-accessories">Kitchen</option>
+            <option value="laptops">Laptops</option>
+            <option value="mens-shirts">Men's Shirts</option>
+            <option value="mens-shoes">Men's Shoes</option>
+            <option value="mens-watches">Men's Watches</option>
+            <option value="mobile-accessories">Mobile Accessories</option>
+            <option value="motorcycle">Motorcycle</option>
+            <option value="skin-care">Skin Care</option>
+            <option value="smartphones">Smartphones</option>
+            <option value="sports-accessories">Sports</option>
+            <option value="sunglasses">Sunglasses</option>
+            <option value="tablets">Tablets</option>
+            <option value="tops">Tops</option>
+            <option value="vehicle">Vehicle</option>
+            <option value="womens-bags">Women's Bags</option>
+            <option value="womens-dresses">Women's Dresses</option>
+            <option value="womens-jewellery">Women's Jewellery</option>
+            <option value="womens-shoes">Women's Shoes</option>
+            <option value="womens-watches">Women's Watches</option>
+          </select>
+          <select id="sortSelect" class="p-sort-select">
+            <option value="relevance">Sort: Relevance</option>
+            <option value="price-asc">Price: Low → High</option>
+            <option value="price-desc">Price: High → Low</option>
+            <option value="rating-desc">Rating: Best First</option>
+            <option value="name-asc">Name: A → Z</option>
+          </select>
+          <button class="p-search-btn" id="searchBtn" onclick="searchProducts()">
+            <i data-lucide="search"></i>
+            Search
+          </button>
+        </div>
+      </div>
+
+      <!-- Featured products shown on load; replaced by search results after a search -->
+      <div id="featuredArea"></div>
+
+      <!-- Search results injected here by products.js -->
+      <div id="resultsArea"></div>
+
+    </div>
+  </section>
+
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="s-footer pt-5 pb-3">
+    <div class="container">
+      <div class="row g-5 mb-4">
+
+        <div class="col-lg-3 col-md-6">
+          <a class="s-brand s-footer-brand" href="./home.html">Samara’s E-Commerce</a>
+          <p class="s-footer-tagline mt-3">Curated goods for a life well-lived.</p>
+          <div class="d-flex gap-3 mt-3">
+            <a href="#" class="s-social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="s-social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="s-social-link" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+            <a href="#" class="s-social-link" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="s-footer-heading">Contact</h5>
+          <ul class="s-footer-list">
+            <li><i data-lucide="map-pin"></i><span>124 Bloom St, Suite 4<br />New York, NY 10001</span></li>
+            <li><i data-lucide="phone"></i><a href="tel:+12125550193">(212) 555-0193</a></li>
+            <li><i data-lucide="mail"></i><a href="mailto:hello@samarashop.com">hello@samarashop.com</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h5 class="s-footer-heading">Explore</h5>
+          <ul class="s-footer-nav">
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./products.html">Products</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Returns</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h5 class="s-footer-heading">Stay in the Loop</h5>
+          <p class="s-footer-tagline">New arrivals and exclusive deals — straight to your inbox.</p>
+          <div class="input-group mt-3">
+            <input type="email" class="form-control s-newsletter-input" placeholder="Your email address" />
+            <button class="btn s-btn s-newsletter-btn" type="button">Subscribe</button>
+          </div>
+          <p class="s-newsletter-note mt-2">No spam, ever. Unsubscribe anytime.</p>
+        </div>
+
+      </div>
+      <hr class="s-footer-hr" />
+      <div class="row align-items-center">
+        <div class="col-md-6"><p class="s-footer-copy mb-0">&copy; 2026 Samara. All rights reserved.</p></div>
+        <div class="col-md-6 text-md-end">
+          <a href="#" class="s-footer-legal">Privacy Policy</a>
+          <span class="s-footer-sep">·</span>
+          <a href="#" class="s-footer-legal">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../products.js"></script>
+  <script>lucide.createIcons();</script>
+
+</body>
+</html>
